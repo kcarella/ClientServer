@@ -28,7 +28,6 @@
 #include "clientConstants.h"
 #include "clientUtils.h"
 
-//TODO: LEFTOFF on replacing parse args with method
 int main(int argc, char** argv)
 {
 	/**

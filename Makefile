@@ -1,5 +1,5 @@
 # Template Makefile for CMPE105-w19
-# You may use and submit this makefile.
+# You may use and submit this makefile..
 
 # There are some lines below you _will_ need to change. Below that, there are
 # lines that you do not _need_ to change, but may do so if you wish.
