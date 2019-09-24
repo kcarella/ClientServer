@@ -5,6 +5,7 @@
 #include<stdlib.h>
 #include<netdb.h>
 #include<sys/socket.h>
+#include<sys/types.h>
 
 
 /**
@@ -40,4 +41,30 @@ struct sockaddr_in createSockaddr(char* serverAddress, int portNumber)
   addr.sin_port = htons(portNumber);
   addr.sin_family = AF_INET;
   return addr;
+}
+
+/**
+  Get sock fd
+**/
+int getSockFd()
+{
+  int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+  if(sockfd < 0)
+  {
+    perror("getSockFd:");
+    exit(EXIT_FAILURE);
+  }
+  return sockfd;
+}
+
+/**
+  Connect client to server.
+**/
+void serverConnect(int fd, struct sockaddr* addr, socklen_t addrlen)
+{
+  if((connect(fd, addr, addrlen)) < 0)
+  {
+    perror("connect() failed");
+    exit(EXIT_FAILURE);
+  }
 }

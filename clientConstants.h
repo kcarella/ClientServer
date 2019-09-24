@@ -10,5 +10,7 @@
 #define REQ_LINE_LEN 58
 #define putline "PUT 40HEX.txt HTTP/1.1\r\n\r\n"
 #define NULLCHAR_SIZE 1
+#define GREET "HOW ARE YOU DOING, SERVER?"
+#define GREET_LEN 27
 
 #endif
